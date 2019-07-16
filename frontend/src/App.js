@@ -6,7 +6,7 @@ import HomePage from "./components/HomePage/HomePage";
 import AnimalPage from "./components/Animal/AnimalPage";
 import TicketPage from "./components/TicketPage/TicketPage";
 import UserPage from "./components/UserPage/UserPage";
-import Navbar from "./components/Navbar/Navbar";
+import NavbarWC from "./components/Navbar/NavbarWC";
 
 import { Container } from "reactstrap";
 import { Route, Switch } from "react-router-dom";
@@ -15,7 +15,7 @@ function App() {
   return (
     <React.Fragment>
       <header>
-        <Navbar />
+        <NavbarWC />
       </header>
       <Container>
         <Switch>
