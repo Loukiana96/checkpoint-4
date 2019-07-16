@@ -1,5 +1,4 @@
 .navItem {
-  color: black;
   margin-left: 15px;
 }
 
@@ -14,4 +13,13 @@
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
   width: 100vw;
   background: linear-gradient(#40e0d0, orangered);
+}
+
+.footer {
+  color: blue;
+  border-top: 2px solid red;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  background: linear-gradient(orangered, #40e0d0);
+  position: fixed;
 }

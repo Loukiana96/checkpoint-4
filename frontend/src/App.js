@@ -7,6 +7,7 @@ import AnimalPage from "./components/Animal/AnimalPage";
 import TicketPage from "./components/TicketPage/TicketPage";
 import UserPage from "./components/UserPage/UserPage";
 import NavbarWC from "./components/Navbar/NavbarWC";
+import Footer from "./components/Navbar/Footer";
 
 import { Container } from "reactstrap";
 import { Route, Switch } from "react-router-dom";
@@ -28,6 +29,7 @@ function App() {
           <Route path="/users/:idUser" component={UserPage} />
         </Switch>
       </Container>
+      <Footer />
     </React.Fragment>
   );
 }
