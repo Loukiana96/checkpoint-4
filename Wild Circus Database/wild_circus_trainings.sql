@@ -29,6 +29,7 @@ CREATE TABLE `trainings` (
   `title` varchar(90) NOT NULL,
   `session_date` date NOT NULL,
   `description` text NOT NULL,
+  `picture` varchar(180) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -39,7 +40,7 @@ CREATE TABLE `trainings` (
 
 LOCK TABLES `trainings` WRITE;
 /*!40000 ALTER TABLE `trainings` DISABLE KEYS */;
-INSERT INTO `trainings` VALUES (1,'Jonglerie','2019-08-01','Stage de deux semaines pour maitriser différentes techniques de jonglage'),(2,'Funabulisme','2019-08-15','Stage de trois semaines pour apprendre les bases du funambulisme'),(3,'Clown','2019-08-08','Stage de quatre jours pour apprendre les tours d\'un clown'),(4,'Magie','2019-08-20','Stage de deux semaines pour apprendre les différents tours d\'un magicien');
+INSERT INTO `trainings` VALUES (1,'Jonglerie','2019-08-01','Stage de deux semaines pour maitriser différentes techniques de jonglage','https://www.pixenli.com/image/Ys02iEHJ'),(2,'Funabulisme','2019-08-15','Stage de trois semaines pour apprendre les bases du funambulisme','https://www.pixenli.com/image/JLFvJRM1'),(3,'Clown','2019-08-08','Stage de quatre jours pour apprendre les tours d\'un clown','https://www.pixenli.com/image/vUoJNJpr'),(4,'Magie','2019-08-20','Stage de deux semaines pour apprendre les différents tours d\'un magicien','https://www.pixenli.com/image/b7jeQwxF');
 /*!40000 ALTER TABLE `trainings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-07-16 11:49:28
+-- Dump completed on 2019-07-16 16:02:16
