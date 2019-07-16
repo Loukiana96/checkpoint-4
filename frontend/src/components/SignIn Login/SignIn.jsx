@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.css";
 
-class SignIn extends React.Compoment {
+class SignIn extends React.Component {
   render() {
     return <p>SignIn</p>;
   }

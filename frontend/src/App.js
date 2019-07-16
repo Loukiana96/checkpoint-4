@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Login from "./components/SignIn Login/Login";
+import SignIn from "./components/SignIn Login/SignIn";
+import HomePage from "./components/HomePage/HomePage";
+import AnimalPage from "./components/Animal/AnimalPage";
+import TicketPage from "./components/TicketPage/TicketPage";
+import UserPage from "./components/UserPage/UserPage";
+
+import { Container } from "reactstrap";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/accueil" component={HomePage} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/registration" exact component={SignIn} />
+        <Route path="/animals" component={AnimalPage} />
+        <Route path="/ticket" component={TicketPage} />
+        <Route path="/users/:idUser" component={UserPage} />
+      </Switch>
+    </Container>
   );
 }
 

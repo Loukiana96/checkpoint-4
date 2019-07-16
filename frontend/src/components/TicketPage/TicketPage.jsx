@@ -1,7 +1,7 @@
 import React from "react";
 import "./TicketPage.css";
 
-class TicketPage extends React.Compoment {
+class TicketPage extends React.Component {
   render() {
     return <p>TicketPage</p>;
   }
