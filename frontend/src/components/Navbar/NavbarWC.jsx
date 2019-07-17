@@ -44,6 +44,9 @@ class NavbarWC extends React.Component {
             <NavItem className="navItem text-center">
               <NavLink to="/login">Connexion</NavLink>
             </NavItem>
+            <NavItem className="navItem text-center">
+              <NavLink to="/registration">Inscription</NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
