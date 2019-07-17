@@ -9,11 +9,11 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(passport.initialize());
-// app.use("/auth", require("./auth"));
+app.use("/auth", require("./auth"));
 
 app.get("/animal/", (req, res) => {
   db.query(
-    `SELECT animals.id, name, age, species, description, picture, SUM(gift) FROM gith INNER JOIN animals ON id.animal=id_animal`,
+    `SELECT animals.id, name, age, species, description, picture FROM animals;`,
     (err, rows) => {
       if (err) {
         console.log(err);

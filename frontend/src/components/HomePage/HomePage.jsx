@@ -13,9 +13,9 @@ class HomePage extends React.Component {
               src="https://www.pixenli.com/image/9v34HUGA"
               alt="First slide"
             />
-            <Carousel.Caption>
-              <h3>Wild Circus</h3>
-              <p>Le cirque du Futur</p>
+            <Carousel.Caption className="carouselBg">
+              <h3 className="carouselText">Wild Circus</h3>
+              <p className="carouselText">Le cirque du Futur</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -25,9 +25,9 @@ class HomePage extends React.Component {
               alt="Second slide"
             />
 
-            <Carousel.Caption>
-              <h3>Wild Circus</h3>
-              <p>Le cirque du Futur</p>
+            <Carousel.Caption className="carouselBg">
+              <h3 className="carouselText">Wild Circus</h3>
+              <p className="carouselText">Le cirque du Futur</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -37,9 +37,9 @@ class HomePage extends React.Component {
               alt="Third slide"
             />
 
-            <Carousel.Caption>
-              <h3>Wild Circus</h3>
-              <p>Le cirque du Futur</p>
+            <Carousel.Caption className="carouselBg">
+              <h3 className="carouselText">Wild Circus</h3>
+              <p className="carouselText">Le cirque du Futur</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

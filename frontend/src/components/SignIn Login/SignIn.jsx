@@ -24,6 +24,7 @@ class SignIn extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     let { firstname, lastname, email, password, confirmPassword } = this.state;
+    const { history } = this.props;
     if (password === confirmPassword) {
       axios
         .post("http://localhost:5050/auth/users", {
@@ -39,6 +40,7 @@ class SignIn extends React.Component {
             email: data.email,
             password: data.password
           });
+          history.push("/login");
         });
     }
   };

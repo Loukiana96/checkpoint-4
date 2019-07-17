@@ -2,12 +2,16 @@
   height: 450px;
 }
 
-.conceptTitle {
-  text-align: center;
-  color: blue;
-}
-
 .concept {
   text-align: center;
   margin-bottom: 5px;
+}
+
+.carouselBg {
+  background-color: #a9eafe;
+  opacity: 0.6;
+}
+
+.carouselText {
+  color: black;
 }

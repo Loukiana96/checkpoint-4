@@ -36,7 +36,6 @@ class AnimalPage extends React.Component {
                     species={animal.species}
                     animalId={animal.id}
                     description={animal.description}
-                    gift={animal.gift}
                   />
                 </Col>
               )

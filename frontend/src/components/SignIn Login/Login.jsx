@@ -23,6 +23,7 @@ class Login extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     let { email, password } = this.state;
+    const { history } = this.props;
     axios
       .post(`http://localhost:5050/auth/login`, {
         email,
@@ -33,6 +34,7 @@ class Login extends React.Component {
           login: { email: data.email, password: data.password, id: data.id }
         });
         localStorage.setItem("user", JSON.stringify(data));
+        history.push("/accueil");
       });
   };
 
