@@ -22,6 +22,9 @@ class Animal extends React.Component {
               <p>Description: {this.props.description}</p>
             </Col>
             <Col xs="5" className="m-1 p-0 d-flex justify-content-center">
+              <p>Total des dons: {this.props.gift}</p>
+            </Col>
+            <Col xs="5" className="m-1 p-0 d-flex justify-content-center">
               <Button>Faire un don</Button>
             </Col>
           </CardFooter>

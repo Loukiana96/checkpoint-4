@@ -7,27 +7,16 @@ class AnimalPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      animalArray: [{}],
-      loading: true
+      animalArray: [{}]
     };
   }
 
   componentDidMount() {
-    const user = JSON.parse(localStorage.getItem("user"));
-    this.setState({
-      userId: this.props.match.params.userId
-    });
-    axios
-      .get(`http://localhost:5050/animal/${this.props.match.params.userId}`, {
-        headers: {
-          Authorization: `Bearer ${user.token}`
-        }
-      })
-      .then(({ data }) => {
-        this.setState({
-          animalArray: data
-        });
+    axios.get(`http://localhost:5050/animal/`).then(({ data }) => {
+      this.setState({
+        animalArray: data
       });
+    });
   }
 
   render() {
@@ -46,6 +35,7 @@ class AnimalPage extends React.Component {
                   species={animal.species}
                   animalId={animal.id}
                   description={animal.description}
+                  gift={animal.gift}
                 />
               </Col>
             )

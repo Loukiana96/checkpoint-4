@@ -7,6 +7,7 @@ import AnimalPage from "./components/Animal/AnimalPage";
 import TicketPage from "./components/TicketPage/TicketPage";
 import UserPage from "./components/UserPage/UserPage";
 import NavbarWC from "./components/Navbar/NavbarWC";
+import TrainingPage from "./components/Training/TrainingPage";
 import Footer from "./components/Navbar/Footer";
 
 import { Container } from "reactstrap";
@@ -24,9 +25,10 @@ function App() {
           <Route path="/accueil" component={HomePage} />
           <Route path="/login" exact component={Login} />
           <Route path="/registration" exact component={SignIn} />
+          <Route path="/training" component={TrainingPage} />
           <Route path="/animals" component={AnimalPage} />
           <Route path="/ticket" component={TicketPage} />
-          <Route path="/users/:idUser" component={UserPage} />
+          <Route path="/user/:idUser" component={UserPage} />
         </Switch>
       </Container>
       <Footer />
