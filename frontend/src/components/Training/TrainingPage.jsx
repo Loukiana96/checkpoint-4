@@ -25,7 +25,7 @@ class TrainingPage extends React.Component {
       <React.Fragment>
         <h2 className="title">Nos stages</h2>
         <p className="text-center">
-          Pour plus d'information contacter nous au 06 92 76 24 48
+          Pour plus d'information contacte-nous au 06 92 76 24 48
         </p>
         {this.state.trainingArray.map((training, i) => {
           return (

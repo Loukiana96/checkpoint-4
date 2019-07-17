@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Card, CardBody, CardImg, Row } from "reactstrap";
+import { Col, Card, CardImg, Row } from "reactstrap";
 import "./Training.css";
 
 class Training extends React.Component {
