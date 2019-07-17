@@ -9,22 +9,22 @@ class Animal extends React.Component {
         <CardBody>
           <CardImg src={this.props.pictureUrl} alt="Animal" />
           <CardFooter className="row justify-content-center px-0 py-2 mx-auto">
-            <Col xs="5" className="m-1 p-0 d-flex justify-content-center">
-              <p>Nom: {this.props.name}</p>
+            <Col>
+              <p>Nom: {this.props.name} </p>
             </Col>
-            <Col xs="5" className="m-1 p-0 d-flex justify-content-center">
-              <p>Age: {this.props.age}</p>
+            <Col>
+              <p>Age: {this.props.age} ans</p>
             </Col>
-            <Col xs="5" className="m-1 p-0 d-flex justify-content-center">
+            <Col>
               <p>Espèce: {this.props.species}</p>
             </Col>
-            <Col xs="5" className="m-1 p-0 d-flex justify-content-center">
+            <Col>
               <p>Description: {this.props.description}</p>
             </Col>
-            <Col xs="5" className="m-1 p-0 d-flex justify-content-center">
+            <Col>
               <p>Total des dons: {this.props.gift}</p>
             </Col>
-            <Col xs="5" className="m-1 p-0 d-flex justify-content-center">
+            <Col>
               <Button>Faire un don</Button>
             </Col>
           </CardFooter>
