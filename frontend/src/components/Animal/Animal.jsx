@@ -10,16 +10,16 @@ class Animal extends React.Component {
           <CardImg src={this.props.pictureUrl} alt="Animal" />
           <CardFooter className="row justify-content-center px-0 py-2 mx-auto">
             <Col>
-              <p>Nom: {this.props.name} </p>
+              <h3>Nom:</h3> <p>{this.props.name} </p>
             </Col>
             <Col>
-              <p>Age: {this.props.age} ans</p>
+              <h3>Age:</h3> <p>{this.props.age} ans</p>
             </Col>
             <Col>
-              <p>Espèce: {this.props.species}</p>
+              <h3>Espèce:</h3> <p>{this.props.species}</p>
             </Col>
             <Col>
-              <p>Description: {this.props.description}</p>
+              <h3>Description:</h3> <p>{this.props.description}</p>
             </Col>
             <Col>
               <Button>Faire un don</Button>

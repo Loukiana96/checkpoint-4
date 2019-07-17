@@ -1,0 +1,9 @@
+.img {
+  height: 20vw;
+  object-fit: contain;
+}
+
+.card {
+  background-color: #fff48c !important;
+  margin-bottom: 40px;
+}

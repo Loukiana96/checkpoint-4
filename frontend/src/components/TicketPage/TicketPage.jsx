@@ -9,7 +9,7 @@ class TicketPage extends React.Component {
         <h2 className="title">Billeterie</h2>
         <Table>
           <tr>
-            <td>Periode \ Spectateur</td>
+            <td>Période \ Spectateur</td>
             <td>Adultes</td>
             <td>Enfant de moins de 12 ans</td>
             <td>Groupes de plus de 10 personnes</td>
@@ -31,10 +31,12 @@ class TicketPage extends React.Component {
           </tr>
         </Table>
         <h2 className="title">Tournée 2019</h2>
-        <p>Lille: 25 juillet</p>
-        <p>Paris: 2 août</p>
-        <p>Lyon: 16 août</p>
-        <p>Toulouse: 23 août</p>
+        <div className="tour">
+          <h3>Lille: </h3> <p>25 juillet</p>
+          <h3>Paris:</h3> <p>2 août</p>
+          <h3>Lyon:</h3> <p>16 août</p>
+          <h3>Toulouse:</h3> <p>23 août</p>
+        </div>
       </React.Fragment>
     );
   }

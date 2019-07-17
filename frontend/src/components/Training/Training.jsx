@@ -1,35 +1,33 @@
 import React from "react";
-import { Col, Card, CardBody, CardImg, CardFooter, Row } from "reactstrap";
+import { Col, Card, CardBody, CardImg, Row } from "reactstrap";
 import "./Training.css";
 
 class Training extends React.Component {
   render() {
     return (
-      <Card>
-        <CardBody>
-          <Row>
-            <Col>
-              <CardImg
-                src={this.props.pictureUrl}
-                alt="training"
-                className="img"
-              />
-            </Col>
-            <Col>
-              <Row>
-                <Col className="m-1 p-0 d-flex justify-content-center">
-                  <p> {this.props.title}</p>
-                </Col>
-                <Col className="m-1 p-0 d-flex justify-content-center">
-                  <p>Date de début: {this.props.date}</p>
-                </Col>
-              </Row>
+      <Card className="card">
+        <Row>
+          <Col>
+            <CardImg
+              src={this.props.pictureUrl}
+              alt="training"
+              className="img"
+            />
+          </Col>
+          <Col>
+            <Row>
               <Col className="m-1 p-0 d-flex justify-content-center">
-                <p> {this.props.description}</p>
+                <h3> {this.props.title}</h3>
               </Col>
+              <Col className="m-1 p-0 d-flex justify-content-center">
+                <p>Date de début: {this.props.date}</p>
+              </Col>
+            </Row>
+            <Col className="m-1 p-0 d-flex justify-content-center">
+              <p> {this.props.description}</p>
             </Col>
-          </Row>
-        </CardBody>
+          </Col>
+        </Row>
       </Card>
     );
   }
