@@ -41,7 +41,7 @@ CREATE TABLE `animals` (
 
 LOCK TABLES `animals` WRITE;
 /*!40000 ALTER TABLE `animals` DISABLE KEYS */;
-INSERT INTO `animals` VALUES (1,'Isis','Tigre',1,'Cette jeune tigresse a été sauvée d\'un cirque en corée qui l\'affamait pour la dresser','https://www.pixenli.com/image/WcXFk-ki'),(2,'Joe','Capucin',3,'Ce petit singe allait être vendu à un collectionneur illégalement.','https://www.pixenli.com/image/oxPG1Oco'),(3,'Mario','Elephant',20,'Après avoir été capturé, torturé et perdre ses défenses, cet éléphant a été receuillis par nos soins et vit maintenant heureux dans notre réserve.','https://www.pixenli.com/image/hHczV94B');
+INSERT INTO `animals` VALUES (1,'Isis','Tigre',2,'Cette jeune tigresse a été sauvée d\'un cirque en corée qui l\'affamait pour la dresser','https://www.pixenli.com/image/WcXFk-ki'),(2,'Joe','Capucin',3,'Ce petit singe allait être vendu à un collectionneur illégalement.','https://www.pixenli.com/image/oxPG1Oco'),(3,'Mario','Elephant',20,'Après avoir été capturé et torturé, cet éléphant a été receuillis par nos soins et vit maintenant heureux dans notre réserve.','https://www.pixenli.com/image/hHczV94B');
 /*!40000 ALTER TABLE `animals` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-07-16 16:02:16
+-- Dump completed on 2019-07-17 14:27:52

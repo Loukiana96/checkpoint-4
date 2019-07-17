@@ -1,0 +1,27 @@
+.carouselImg {
+  height: 450px;
+}
+
+.concept {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.twine {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.carouselBg {
+  background-color: #a9eafe;
+  opacity: 0.6;
+}
+
+.carouselText {
+  color: black;
+}
+
+.divConcept {
+  border: 3px solid #40e0d0;
+  opacity: 0.7;
+  border-radius: 20px;
+}
