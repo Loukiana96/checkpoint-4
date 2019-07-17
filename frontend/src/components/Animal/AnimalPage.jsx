@@ -33,7 +33,7 @@ class AnimalPage extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h2 className="Title">Nos animaux sauvés</h2>
+        <h2 className="title">Nos animaux sauvés</h2>
         {this.state.animalArray.map((animal, i) => {
           return (
             Animal && (
@@ -45,6 +45,7 @@ class AnimalPage extends React.Component {
                   age={animal.age}
                   species={animal.species}
                   animalId={animal.id}
+                  description={animal.description}
                 />
               </Col>
             )

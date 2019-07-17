@@ -1,9 +1,42 @@
 import React from "react";
 import "./TicketPage.css";
+import { Table } from "reactstrap";
 
 class TicketPage extends React.Component {
   render() {
-    return <p>TicketPage</p>;
+    return (
+      <React.Fragment>
+        <h2 className="title">Billeterie</h2>
+        <Table>
+          <tr>
+            <td>Periode \ Spectateur</td>
+            <td>Adultes</td>
+            <td>Enfant de moins de 12 ans</td>
+            <td>Groupes de plus de 10 personnes</td>
+            <td>Ecoles</td>
+          </tr>
+          <tr>
+            <td>Lundi à Vendredi (sans Mercredi)</td>
+            <td>15€</td>
+            <td>7€</td>
+            <td>10€ (per person)</td>
+            <td>5€ (per person)</td>
+          </tr>
+          <tr>
+            <td>Week-End et Mercredi</td>
+            <td>20€</td>
+            <td>10€</td>
+            <td>15€ (par personne)</td>
+            <td>7€ (par personne)</td>
+          </tr>
+        </Table>
+        <h2 className="title">Tournée 2019</h2>
+        <p>Lille: 25 juillet</p>
+        <p>Paris: 2 août</p>
+        <p>Lyon: 16 août</p>
+        <p>Toulouse: 23 août</p>
+      </React.Fragment>
+    );
   }
 }
 
