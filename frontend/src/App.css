@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Allura";
+  src: url("./Allura-Regular.ttf");
+  font-family: "Segan";
+  src: url("./Segan-Light.ttf");
+}
+
 a {
   text-decoration: none !important;
   color: blue !important;
@@ -10,4 +17,20 @@ a {
 
 body {
   background-color: lightblue;
+}
+
+h2 {
+  font-family: Allura;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: Allura;
+  font-weight: bold;
+}
+
+p {
+  font-family: Segan;
+  font-size: 15px;
+  font-weight: bold;
 }

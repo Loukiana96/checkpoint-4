@@ -15,3 +15,9 @@
 .carouselText {
   color: black;
 }
+
+.divConcept {
+  border: 5px solid #40e0d0;
+  opacity: 0.7;
+  border-radius: 20px;
+}

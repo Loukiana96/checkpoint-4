@@ -39,9 +39,6 @@ class NavbarWC extends React.Component {
               <NavLink to="/ticket">Billeterie</NavLink>
             </NavItem>
             <NavItem className="navItem text-center">
-              <NavLink to="/user/:idUser">Tes dons</NavLink>
-            </NavItem>
-            <NavItem className="navItem text-center">
               <NavLink to="/login">Connexion</NavLink>
             </NavItem>
             <NavItem className="navItem text-center">
