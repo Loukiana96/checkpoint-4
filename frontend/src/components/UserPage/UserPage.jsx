@@ -13,11 +13,9 @@ class UserPage extends React.Component {
 
   componentDidMount() {
     const user = JSON.parse(localStorage.getItem("user"));
-    this.setState({
-      userId: this.props.match.params.userId
-    });
+    const currentUser = JSON.parse(localStorage.getItem("user")).user.id;
     axios
-      .get(`http://localhost:5050/user/${this.props.match.params.userId}`, {
+      .get(`http://localhost:5050/user/${currentUser}`, {
         headers: {
           Authorization: `Bearer ${user.token}`
         }

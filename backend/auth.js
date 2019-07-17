@@ -18,10 +18,10 @@ router.post("/users", (req, res) => {
     db.query(
       `INSERT INTO users ( email, password, firstname, lastname) VALUES ('${
         user.email
-      }', '${user.password}', '${user.firstname}', '${user.lastname}')`,
+      }', '${user.password}', '${user.firstname}', '${user.lastname})`,
       (err, rows, fields) => {
         if (err) throw err;
-        msg = "Registration ok!";
+        msg = "Answer recorded!";
       }
     );
     res.status(200).send(user);
@@ -60,7 +60,7 @@ router.get(
   "/testAuth",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    res.status(200).send(`Welcome ${req.user.firstname}, you're logged in !`);
+    res.status(200).send(`Welcome ${req.user.nickname}, you're logged in !`);
   }
 );
 
