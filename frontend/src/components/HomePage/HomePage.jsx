@@ -43,6 +43,27 @@ class HomePage extends React.Component {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+        <div className="m-0">
+          <h1 className="conceptTitle">Wild Circus</h1>
+          <p className="concept">
+            Wild Circus est le premier cirque de France a avoir des locaux
+            permanents. Alors qu'une partie de ses artistes part en tournée 3
+            mois dans l'année, l'autre partie propose des spectacles à domicile.
+          </p>
+          <p className="concept">
+            {" "}
+            La grande nouveauté apportée par Wild Circus est qu'aucun animal
+            n'est utilisé lors du spectacle. En effet, les tours impliquants des
+            animaux sont réalisés à partir d'hologramme. En revanche, le cirque
+            possède une réserve naturelle qui sert à receuillir des animaux
+            blessés ou maltraités.
+          </p>
+          <p className="concept">
+            {" "}
+            Le Wild Circus propose également des stages pour initier des
+            amateurs aux arts du cirque.
+          </p>
+        </div>
       </React.Fragment>
     );
   }
