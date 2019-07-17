@@ -2,3 +2,8 @@ a {
   text-decoration: none !important;
   color: blue !important;
 }
+
+.title {
+  text-align: center;
+  color: blue;
+}
