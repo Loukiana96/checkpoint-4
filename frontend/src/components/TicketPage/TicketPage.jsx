@@ -19,8 +19,8 @@ class TicketPage extends React.Component {
             <td>Lundi à Vendredi (sans Mercredi)</td>
             <td>15€</td>
             <td>7€</td>
-            <td>10€ (per person)</td>
-            <td>5€ (per person)</td>
+            <td>10€ (par personne)</td>
+            <td>5€ (par personne)</td>
           </tr>
           <tr>
             <td>Week-End et Mercredi</td>

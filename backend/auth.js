@@ -18,7 +18,7 @@ router.post("/users", (req, res) => {
     db.query(
       `INSERT INTO users ( email, password, firstname, lastname) VALUES ('${
         user.email
-      }', '${user.password}', '${user.firstname}', '${user.lastname})`,
+      }', '${user.password}', '${user.firstname}', '${user.lastname}')`,
       (err, rows, fields) => {
         if (err) throw err;
         msg = "Answer recorded!";
