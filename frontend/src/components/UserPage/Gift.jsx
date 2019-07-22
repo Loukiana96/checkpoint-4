@@ -1,30 +1,28 @@
 import React from "react";
-import { Col, Card, CardBody, CardImg, CardFooter, Button } from "reactstrap";
+import "./User.css";
+import { Col, Card, CardBody, CardImg, CardFooter } from "reactstrap";
 
 class Gift extends React.Component {
   render() {
     return (
       <Card>
         <CardBody>
-          <CardImg src={this.props.pictureUrl} alt="Gift" />
+          <CardImg src={this.props.pictureUrl} alt="gift" />
           <CardFooter className="row justify-content-center px-0 py-2 mx-auto">
-            <Col xs="5" className="m-1 p-0 d-flex justify-content-center">
-              <p>Nom: {this.props.name}</p>
+            <Col>
+              <h3>Nom:</h3> <p>{this.props.name} </p>
             </Col>
-            <Col xs="5" className="m-1 p-0 d-flex justify-content-center">
-              <p>Age: {this.props.age}</p>
+            <Col>
+              <h3>Age:</h3> <p>{this.props.age} ans</p>
             </Col>
-            <Col xs="5" className="m-1 p-0 d-flex justify-content-center">
-              <p>Espèce: {this.props.species}</p>
+            <Col>
+              <h3>Espèce:</h3> <p>{this.props.species}</p>
             </Col>
-            <Col xs="5" className="m-1 p-0 d-flex justify-content-center">
-              <p>Description: {this.props.description}</p>
+            <Col>
+              <h3>Description:</h3> <p>{this.props.description}</p>
             </Col>
-            <Col xs="5" className="m-1 p-0 d-flex justify-content-center">
-              <p>Tes dons: {this.props.gift}</p>
-            </Col>
-            <Col xs="5" className="m-1 p-0 d-flex justify-content-center">
-              <Button>Faire un don</Button>
+            <Col>
+              <h3>Tes dons:</h3> <p>{this.props.gift} €</p>
             </Col>
           </CardFooter>
         </CardBody>

@@ -63,7 +63,7 @@ class Animal extends React.Component {
                 <label htmlFor="gift">Montant du don</label>
                 <Form.Control
                   type="text"
-                  value={this.props.gift}
+                  value={this.state.gift}
                   onChange={e => {
                     this.handleChange(e);
                   }}
