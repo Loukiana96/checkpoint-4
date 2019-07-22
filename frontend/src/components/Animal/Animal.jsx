@@ -11,11 +11,6 @@ class Animal extends React.Component {
       gift: ""
     };
   }
-  toggle() {
-    this.setState(prevState => ({
-      modal: !prevState.modal
-    }));
-  }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -33,7 +28,6 @@ class Animal extends React.Component {
         this.setState({
           gift: data.gift
         });
-        console.log("giftData: " + this.state.gift);
       });
   }
 
@@ -41,10 +35,8 @@ class Animal extends React.Component {
     this.setState({
       gift: e.target.value
     });
-    console.log("gift: " + this.state.gift);
   }
   render() {
-    console.log("renderGift: " + this.state.gift);
     return (
       <Card>
         <CardBody>
