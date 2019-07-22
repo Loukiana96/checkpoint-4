@@ -1,7 +1,7 @@
 import React from "react";
 import Gift from "./Gift";
 import axios from "axios";
-import { Col } from "reactstrap";
+import { Col, Row } from "reactstrap";
 
 class UserPage extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class UserPage extends React.Component {
     const user = JSON.parse(localStorage.getItem("user"));
     const currentUser = JSON.parse(localStorage.getItem("user")).user.id;
     axios
-      .get(`http://localhost:5050/user/${currentUser}`, {
+      .get(`http://localhost:5050/user/${currentUser}/`, {
         headers: {
           Authorization: `Bearer ${user.token}`
         }
@@ -31,24 +31,26 @@ class UserPage extends React.Component {
     return (
       <React.Fragment>
         <h2 className="title">Tes dons</h2>
-        {this.state.giftArray.map((gift, i) => {
-          return (
-            gift && (
-              <Col sm="6" md="4" lg="3" xl="3" key={i}>
-                <Gift
-                  key={i}
-                  pictureUrl={gift.picture}
-                  name={gift.name}
-                  age={gift.age}
-                  species={gift.species}
-                  giftId={gift.id}
-                  description={gift.description}
-                  gift={gift.gift}
-                />
-              </Col>
-            )
-          );
-        })}
+        <Row>
+          {this.state.giftArray.map((gift, i) => {
+            return (
+              gift && (
+                <Col sm="6" md="4" lg="4" xl="4" key={i}>
+                  <Gift
+                    key={i}
+                    pictureUrl={gift.picture}
+                    name={gift.name}
+                    age={gift.age}
+                    animalId={gift.id_animal}
+                    species={gift.species}
+                    description={gift.description}
+                    gift={gift.gift}
+                  />
+                </Col>
+              )
+            );
+          })}
+        </Row>
       </React.Fragment>
     );
   }

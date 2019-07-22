@@ -27,7 +27,7 @@ class AnimalPage extends React.Component {
           {this.state.animalArray.map((animal, i) => {
             return (
               Animal && (
-                <Col sm="6" md="4" lg="3" xl="3" key={i}>
+                <Col sm="6" md="4" lg="4" xl="4" key={i}>
                   <Animal
                     key={i}
                     pictureUrl={animal.picture}

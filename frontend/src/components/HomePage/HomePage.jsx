@@ -1,7 +1,6 @@
 import React from "react";
 import "./HomePage.css";
 import { Carousel } from "react-bootstrap";
-
 class HomePage extends React.Component {
   render() {
     return (
@@ -46,7 +45,7 @@ class HomePage extends React.Component {
         <h1 className="title">Wild Circus</h1>
         <div className="divConcept">
           <p className="concept">
-            Wild Circus est le premier cirque de France a avoir des locaux
+            Wild Circus est le premier cirque de France à avoir des locaux
             permanents. Alors qu'une partie de ses artistes part en tournée 3
             mois dans l'année, l'autre partie propose des spectacles à domicile.
           </p>
@@ -62,6 +61,18 @@ class HomePage extends React.Component {
             {" "}
             Le Wild Circus propose également des stages pour initier des
             amateurs aux arts du cirque.
+          </p>
+          <p className="concept">
+            Viens vivre une{" "}
+            <a
+              href="/Twine-Wild-Circus.html"
+              type="text/html"
+              title="twinestory.html"
+              className="concept"
+              target="_blank"
+            >
+              Aventure interactive
+            </a>
           </p>
         </div>
       </React.Fragment>

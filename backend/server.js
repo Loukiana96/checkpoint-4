@@ -43,18 +43,33 @@ app.get("/training/", (req, res) => {
   );
 });
 
-app.post("/user/:userId/", (req, res) => {
-  const userId = req.params.userId;
+app.post("/animal/:currentUser/", (req, res) => {
+  const currentUser = req.params.currentUser;
   const animalId = req.body.animalId;
+  const gift = req.body.gift;
   db.query(
-    `SELECT id, title, DATE_FORMAT(session_date, "%d/%m/%Y") as session_format_date, description, picture FROM trainings`,
+    `INSERT INTO is_gift (id_user, id_animal, gift) VALUE (${currentUser}, ${animalId}, ${gift})`,
     (err, rows) => {
       if (err) {
         console.log(err);
-        return res.status(500).send("error when getting training route");
+        return res.status(500).send("error when post a gift");
+      }
+      res.status(200).send(rows);
+    }
+  );
+});
+
+app.get("/user/:currentUser/", (req, res) => {
+  const currentUser = req.params.currentUser;
+  db.query(
+    `SELECT name, age, species, description, gift, id_user, id_animal, picture FROM is_gift INNER JOIN animals ON animals.id=id_animal INNER JOIN users ON users.id=id_user WHERE id_user=${currentUser};`,
+    (err, rows) => {
+      if (err) {
+        console.log(err);
+        return res.status(500).send("error when getting animals route");
       }
       if (!rows) {
-        return res.status(404).send("No training found");
+        return res.status(404).send("No animals found");
       }
       res.status(200).send(rows);
     }
