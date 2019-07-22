@@ -43,18 +43,18 @@ app.get("/training/", (req, res) => {
   );
 });
 
-app.post("/user/:userId/", (req, res) => {
-  const userId = req.params.userId;
+app.post("/animal/:currentUser/", (req, res) => {
+  const currentUser = req.params.currentUser;
   const animalId = req.body.animalId;
+  const gift = req.body.gift;
+  console.log("body: " + req.body);
+  console.log("gift: " + gift);
   db.query(
-    `SELECT id, title, DATE_FORMAT(session_date, "%d/%m/%Y") as session_format_date, description, picture FROM trainings`,
+    `INSERT INTO is_gift (id_user, id_animal, gift) VALUE (${currentUser}, ${animalId}, ${gift})`,
     (err, rows) => {
       if (err) {
         console.log(err);
-        return res.status(500).send("error when getting training route");
-      }
-      if (!rows) {
-        return res.status(404).send("No training found");
+        return res.status(500).send("error when post a gift");
       }
       res.status(200).send(rows);
     }

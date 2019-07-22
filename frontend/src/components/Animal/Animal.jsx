@@ -1,9 +1,50 @@
 import React from "react";
 import "./Animal.css";
 import { Col, Card, CardBody, CardImg, CardFooter, Button } from "reactstrap";
+import Form from "react-bootstrap/Form";
+import axios from "axios";
 
 class Animal extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      gift: ""
+    };
+  }
+  toggle() {
+    this.setState(prevState => ({
+      modal: !prevState.modal
+    }));
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const user = JSON.parse(localStorage.getItem("user"));
+    const currentUser = JSON.parse(localStorage.getItem("user")).user.id;
+    axios
+      .post(`http://localhost:5050/animal/${currentUser}`, {
+        headers: {
+          Authorization: `Bearer ${user.token}`
+        },
+        animalId: this.props.animalId,
+        gift: this.state.gift
+      })
+      .then(({ data }) => {
+        this.setState({
+          gift: data.gift
+        });
+        console.log("giftData: " + this.state.gift);
+      });
+  }
+
+  handleChange(e) {
+    this.setState({
+      gift: e.target.value
+    });
+    console.log("gift: " + this.state.gift);
+  }
   render() {
+    console.log("renderGift: " + this.state.gift);
     return (
       <Card>
         <CardBody>
@@ -21,9 +62,23 @@ class Animal extends React.Component {
             <Col>
               <h3>Description:</h3> <p>{this.props.description}</p>
             </Col>
-            <Col>
+            <Form
+              onSubmit={e => {
+                this.handleSubmit(e);
+              }}
+            >
+              <Form.Group controlId="gift">
+                <label htmlFor="gift">Montant du don</label>
+                <Form.Control
+                  type="text"
+                  value={this.props.gift}
+                  onChange={e => {
+                    this.handleChange(e);
+                  }}
+                />
+              </Form.Group>
               <Button>Faire un don</Button>
-            </Col>
+            </Form>
           </CardFooter>
         </CardBody>
       </Card>
