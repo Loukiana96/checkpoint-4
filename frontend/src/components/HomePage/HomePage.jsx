@@ -46,7 +46,7 @@ class HomePage extends React.Component {
         <h1 className="title">Wild Circus</h1>
         <div className="divConcept">
           <p className="concept">
-            Wild Circus est le premier cirque de France a avoir des locaux
+            Wild Circus est le premier cirque de France à avoir des locaux
             permanents. Alors qu'une partie de ses artistes part en tournée 3
             mois dans l'année, l'autre partie propose des spectacles à domicile.
           </p>

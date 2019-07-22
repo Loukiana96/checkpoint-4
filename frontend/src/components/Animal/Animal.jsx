@@ -60,7 +60,8 @@ class Animal extends React.Component {
               }}
             >
               <Form.Group controlId="gift">
-                <label htmlFor="gift">Montant du don</label>
+                <h3>Faire un don</h3>
+                <label htmlFor="gift">Montant</label>
                 <Form.Control
                   type="text"
                   value={this.state.gift}
