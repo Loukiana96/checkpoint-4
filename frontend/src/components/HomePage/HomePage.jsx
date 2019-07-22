@@ -1,7 +1,6 @@
 import React from "react";
 import "./HomePage.css";
 import { Carousel } from "react-bootstrap";
-
 class HomePage extends React.Component {
   render() {
     return (
@@ -62,6 +61,18 @@ class HomePage extends React.Component {
             {" "}
             Le Wild Circus propose également des stages pour initier des
             amateurs aux arts du cirque.
+          </p>
+          <p className="concept">
+            Viens vivre une{" "}
+            <a
+              href="/Twine-Wild-Circus.html"
+              type="text/html"
+              title="twinestory.html"
+              className="concept"
+              target="_blank"
+            >
+              Aventure interactive
+            </a>
           </p>
         </div>
       </React.Fragment>
